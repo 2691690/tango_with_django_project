@@ -23,7 +23,14 @@
         The specified category does not exist.
     {% endif %}
     </div>
-    <div><a href="/rango/">Index</a></div>
+    <div>
+        <a href="/rango/">Index</a>
+        {% if category %}
+            <a href="/rango/category/{{ category.slug }}/add_page/">Add Page</a>
+        {% else %} 
+            The specified category does not exist.
+        {% endif %}
+    </div>
 </body>
 
 </html>
